@@ -40,7 +40,7 @@ class BCG():
             alpha_m = r_m_dot_r_m / E_2
             x_m += alpha_m * sigma_At_s
             r_m -= alpha_m * A_sigma_A_s
-            nu_m += alpha_m**2 #r_m_dot_r_m * r_m_dot_r_m / E_2
+            nu_m += r_m_dot_r_m * r_m_dot_r_m / E_2
             sigma_m = ((d - 1 - m) * nu_m / (m + 1)).sqrt() ##??
             prev_r_m_dot_r_m = r_m_dot_r_m
             r_m_dot_r_m = torch.mm(r_m.t(), r_m)
