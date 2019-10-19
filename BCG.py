@@ -60,4 +60,4 @@ class BCG():
             if m == m_max or m == d:
                 raise
                 
-	return x_m, sigmaF, nu_m/m
+        return x_m, sigmaF, nu_m/m
