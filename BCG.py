@@ -1,3 +1,5 @@
+import torch
+
 class BCG():
     
     def __init__(self, A, b, prior_mean, prior_cov, eps, m_max):
