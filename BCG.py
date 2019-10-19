@@ -60,8 +60,4 @@ class BCG():
             if m == m_max or m == d:
                 raise
                 
-		return self.BCGOutput(sigmaF, m, x_m, nu_m/m)
-        
-    def BCGOutput(self, sigmaF, m, x_m, nu_m):
-        
-        pass #TODO
+		return x_m, sigmaF, nu_m/m
