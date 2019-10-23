@@ -59,7 +59,7 @@ class BCG():
             r_m_dot_r_m = np.dot(r_m.T, r_m)
             E = np.sqrt(E_2)
             
-            sigmaF[:, m] = (sigma_At_s/E).reshape(100,)
+            sigmaF[:, m] = (sigma_At_s/E).reshape(d,)
                        
             m +=1
             
@@ -69,8 +69,8 @@ class BCG():
             if batch_directions:
                 s_m = r_m
                 for i in range(m):
-                    coeff = r_m.T.dot(A.dot(sigma0.dot(A.T.dot(search_directions[:, i].reshape(100,1)))))                    
-                    s_m -= coeff*search_directions[:, i].reshape(100,1)
+                    coeff = r_m.T.dot(A.dot(sigma0.dot(A.T.dot(search_directions[:, i].reshape(d,1)))))                    
+                    s_m -= coeff*search_directions[:, i].reshape(d,1)
             else:
                 beta_m = r_m_dot_r_m / prev_r_m_dot_r_m
                 s_m = r_m + beta_m *s_m
@@ -92,6 +92,7 @@ def conjugate_grad(A, b, maxiter, x_true):
     rel_error = np.zeros(n)
     trace_error = np.zeros(n)
     r = np.dot(A, x) - b
+    d = b.shape[0]
     s = - r
     r_k_norm = np.dot(r.T, r)
     for i in range(maxiter):
@@ -100,9 +101,9 @@ def conjugate_grad(A, b, maxiter, x_true):
         x += alpha * s
         
         rel_error[i] = np.linalg.norm(x_true-x)/np.linalg.norm(x_true)
-        sigmaF[:, i] = s.reshape(100,)/np.sqrt(np.dot(s.T, As))
-        Sigma_m = np.eye(100) - sigmaF[:, :i+1].dot(sigmaF[:, :i+1].T)
-        trace_error[i] = np.trace(Sigma_m)/np.trace(np.eye(100))
+        sigmaF[:, i] = s.reshape(d,)/np.sqrt(np.dot(s.T, As))
+        Sigma_m = np.eye(d) - sigmaF[:, :i+1].dot(sigmaF[:, :i+1].T)
+        trace_error[i] = np.trace(Sigma_m)/np.trace(np.eye(d))
         
         r += alpha * As
         r_kplus1_norm = np.dot(r.T, r)
