@@ -13,6 +13,6 @@ Convergence in mean of BayesCG (BCG). For several independent test problems, the
 ![Point estimation](https://github.com/AndreySavinov/BayessianCG/blob/master/images/point_est.png)
 
 
-Convergence in posterior covariance of BCG measured by trace of Σm.
+Convergence in posterior covariance of BCG measured by tr(Σm)/tr(Σ0).
 
 ![Trace estimation](https://github.com/AndreySavinov/BayessianCG/blob/master/images/traces_est.png)
