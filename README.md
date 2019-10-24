@@ -8,20 +8,20 @@
 
 ## Results
 
-Convergence in mean of BayesCG (BCG). For several independent test problems, the error was computed. The standard CG method was compared to variants of BayesCG, corresponding to different prior covariances. The search directions used for BayesCG were either computed sequentially.
+1. Convergence in mean of BayesCG (BCG). For several independent test problems, the error was computed. The standard CG method was compared to variants of BayesCG, corresponding to different prior covariances. The search directions used for BayesCG were either computed sequentially.
 
 ![Point estimation](https://github.com/AndreySavinov/BayessianCG/blob/master/images/point_est.png)
 
 
-Convergence in posterior covariance of BCG measured by tr(Σm)/tr(Σ0).
+2. Convergence in posterior covariance of BCG measured by tr(Σm)/tr(Σ0).
 
 ![Trace estimation](https://github.com/AndreySavinov/BayessianCG/blob/master/images/traces_est.png)
 
 
-Assessment of the uncertainty quantification provided by the Gaussian BayesCG method, with different choices of Σ0.
+3. Assessment of the uncertainty quantification provided by the Gaussian BayesCG method, with different choices of Σ0.
 
 ![Uncertainty Quantification](https://github.com/AndreySavinov/BayessianCG/blob/master/images/UQ1.png)
 
-Convergence of the posterior for a linear system arising from a discretisation of the Poisson PDE for different choice of prior (left) and function reconstruction (right).
+4. Convergence of the posterior for a linear system arising from a discretisation of the Poisson PDE for different choice of prior (left) and function reconstruction (right).
 
 ![Poisson](https://github.com/AndreySavinov/BayessianCG/blob/master/images/Poisson.png)
