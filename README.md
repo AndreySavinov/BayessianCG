@@ -16,3 +16,12 @@ Convergence in mean of BayesCG (BCG). For several independent test problems, the
 Convergence in posterior covariance of BCG measured by tr(Σm)/tr(Σ0).
 
 ![Trace estimation](https://github.com/AndreySavinov/BayessianCG/blob/master/images/traces_est.png)
+
+
+Assessment of the uncertainty quantification provided by the Gaussian BayesCG method, with different choices of Σ0.
+
+![Uncertainty Quantification](https://github.com/AndreySavinov/BayessianCG/blob/master/images/UQ1.png)
+
+Convergence of the posterior for a linear system arising from a discretisation of the Poisson PDE for different choice of prior (left) and function reconstruction (right).
+
+![Poisson](https://github.com/AndreySavinov/BayessianCG/blob/master/images/Poisson.png)
