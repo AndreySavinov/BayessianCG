@@ -8,6 +8,6 @@
 
 ## Results
 
-Convergence in mean of BayesCG (BCG). For several independent test problems, x ∗ ∼ μ ref , the error kx m − x ∗ k 2 was computed. The standard CG method was compared to variants of BayesCG, corresponding to different prior covariances. The search directions used for BayesCG were either computed sequentially.
+Convergence in mean of BayesCG (BCG). For several independent test problems, the error was computed. The standard CG method was compared to variants of BayesCG, corresponding to different prior covariances. The search directions used for BayesCG were either computed sequentially.
 
 ![Point estimation](https://github.com/AndreySavinov/BayessianCG/images/point_est.png)
